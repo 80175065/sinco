@@ -198,4 +198,27 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script></body>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const boton = document.getElementById('btnSiguiente');
+
+    boton.addEventListener('click', function (e) {
+      e.preventDefault(); // Previene redirección automática si es un form
+      const usuario = document.getElementById('txtUsuario').value;
+      const contrasena = document.getElementById('txtContrasena').value;
+
+      // Muestra en consola
+      console.log("Usuario:", usuario);
+      console.log("Contraseña:", contrasena);
+
+      // Puedes hacer algo con esos datos, como enviarlos con fetch, etc.
+      alert("Datos capturados:\nUsuario: " + usuario + "\nContraseña: " + contrasena);
+    });
+  });
+</script>
+
+
+	
 </html>
