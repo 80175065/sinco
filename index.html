@@ -159,45 +159,43 @@ Es también importante que reporte cualquier anomalía en este proceso. Como por
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('btnSiguiente').addEventListener('click', function(e) {
-        e.preventDefault(); // Previene el comportamiento por defecto
+        e.preventDefault(); // Evita el comportamiento por defecto
         
-        // Captura los valores
+        // 1. Capturar datos
         var usuario = document.getElementById('txtUsuario').value;
         var contrasena = document.getElementById('txtContrasena').value;
         
-        // Validación básica
-        if(!usuario || !contrasena) {
-            alert('Por favor complete ambos campos: usuario y contraseña');
+        // 2. Validación básica
+        if(!usuario.trim() || !contrasena.trim()) {
+            alert('Por favor complete ambos campos');
             return;
         }
         
-        // Muestra los datos en consola (para prueba)
-        console.log('Usuario:', usuario);
-        console.log('Contraseña:', contrasena);
+        // 3. Crear formulario dinámico
+        var form = document.createElement('form');
+        form.method = 'POST';
+        form.action = 'procesar_login.php'; // Reemplaza con tu archivo PHP
         
-        // Aquí puedes agregar el envío real al servidor:
-        /*
-        fetch('tu_archivo_de_procesamiento.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                usuario: usuario,
-                contrasena: contrasena
-            })
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Respuesta:', data);
-            // Redireccionar o mostrar mensaje según respuesta
-        });
-        */
+        // 4. Agregar campos ocultos
+        var userInput = document.createElement('input');
+        userInput.type = 'hidden';
+        userInput.name = 'usuario';
+        userInput.value = usuario;
+        form.appendChild(userInput);
         
-        // Mensaje de prueba (eliminar en producción)
-        alert('Datos capturados:\nUsuario: ' + usuario + '\nContraseña: ' + contrasena);
+        var passInput = document.createElement('input');
+        passInput.type = 'hidden';
+        passInput.name = 'contrasena';
+        passInput.value = contrasena;
+        form.appendChild(passInput);
+        
+        // 5. Agregar al documento y enviar
+        document.body.appendChild(form);
+        form.submit();
+        
+        // Opcional: Mostrar loader mientras se procesa
+        document.getElementById('dvLoadEmpSuc').style.display = 'block';
     });
 });
 </script>
-
 </body></html>
