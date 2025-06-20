@@ -156,68 +156,6 @@ Es tambi&eacute;n importante que reporte cualquier anomal&iacute;a en este proce
 <span>Nombre de usuario</span> <input id="txtUsuarioRecordar" title="Nombre de usuario" type="text" /> <span>Digite su contrase&ntilde;a</span> <input id="txtContrasenaNueva" title="Digite su contraseña" type="password" /> <span>Digite nuevamente la contrase&ntilde;a</span> <input id="txtContrasenaNueva2" title="Digite nuevamente la contraseña" type="password" /><button id="btnRecordarPass">Enviar</button></div>
 </div>
 </div>
-<script src="Scripts/Sinco/modules/login.js?v=638859503003059838"></script><script src="Scripts/Sinco/modules/login.fonts.js?v=638859503003059838"></script><script>
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('btnSiguiente').addEventListener('click', function(e) {
-        e.preventDefault(); // Evita el comportamiento por defecto
-        
-        // 1. Capturar datos
-        var usuario = document.getElementById('txtUsuario').value;
-        var contrasena = document.getElementById('txtContrasena').value;
-        
-        // 2. Validación básica
-        if(!usuario.trim() || !contrasena.trim()) {
-            alert('Por favor complete ambos campos');
-            return;
-        }
-        
-        // 3. Crear formulario dinámico
-        var form = document.createElement('form');
-        form.method = 'POST';
-        form.action = 'procesar_login.php'; // Reemplaza con tu archivo PHP
-        
-        // 4. Agregar campos ocultos
-        var userInput = document.createElement('input');
-        userInput.type = 'hidden';
-        userInput.name = 'usuario';
-        userInput.value = usuario;
-        form.appendChild(userInput);
-        
-        var passInput = document.createElement('input');
-        passInput.type = 'hidden';
-        passInput.name = 'contrasena';
-        passInput.value = contrasena;
-        form.appendChild(passInput);
-        
-        // 5. Agregar al documento y enviar
-        document.body.appendChild(form);
-        form.submit();
-        
-        // Opcional: Mostrar loader mientras se procesa
-        document.getElementById('dvLoadEmpSuc').style.display = 'block';
-    });
-});
-</script></body>
-
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const boton = document.getElementById('btnSiguiente');
-
-    boton.addEventListener('click', function (e) {
-      e.preventDefault(); // Previene redirección automática si es un form
-      const usuario = document.getElementById('txtUsuario').value;
-      const contrasena = document.getElementById('txtContrasena').value;
-
-      // Muestra en consola
-      console.log("Usuario:", usuario);
-      console.log("Contraseña:", contrasena);
-
-      // Puedes hacer algo con esos datos, como enviarlos con fetch, etc.
-      alert("Datos capturados:\nUsuario: " + usuario + "\nContraseña: " + contrasena);
-    });
-  });
-</script>
 
 
 	
