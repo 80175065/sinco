@@ -1,0 +1,41 @@
+﻿@font-face {
+    font-family: Myriad Pro;
+    /*src: url(myriad-web-pro.ttf);*/
+
+    src: url('../fonts/MYRIADPROREGULAR.eot');
+    src: local('MYRIADPROREGULAR'), url('../fonts/MYRIADPROREGULAR.woff') format('woff'), url('../fonts/MYRIADPROREGULAR.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Antipasto';
+    src: url('../fonts/antipasto_regular-webfont.eot');
+    src: url('../fonts/antipasto_regular-webfont.eot#iefix') format('embedded-opentype'),
+         url('../fonts/antipasto_regular-webfont.woff2') format('woff2'),
+         url('../fonts/antipasto_regular-webfont.woff') format('woff'),
+         url('../fonts/antipasto_regular-webfont.ttf') format('truetype'),
+         url('../images/antipasto_regular-webfont.svg#antipastoregular') format('svg');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/roboto-light-webfont.eot');
+    src: url('../fonts/roboto-light-webfont.eot#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-light-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-light-webfont.woff') format('woff'),
+         url('../fonts/roboto-light-webfont.ttf') format('truetype'),
+         url('../images/roboto-light-webfont.svg#robotolight') format('svg');
+}
+
+body {
+    font-family: 'Segoe UI', 'MgOpen Moderna', 'Gill Sans','Myriad Pro', 'Nimbus Sans', Tahoma, Arial, sans-serif;
+    margin: 0;
+}
+
+input[type="text"],
+input[type="Password"] {
+    -webkit-border-radius: 4px 5px;
+    -moz-border-radius: 4px 5px;
+    border-radius: 4px 5px;
+    border: 1px solid silver;
+    border-collapse: collapse;
+}

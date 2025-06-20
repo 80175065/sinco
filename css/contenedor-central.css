@@ -1,0 +1,304 @@
+.contenedor-principal {
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    -ms-flex: 1 0 auto;
+    -webkit-flex: 1 0 auto;
+    flex: 1 0 auto;
+    -ms-flex-flow: column nowrap;
+    -webkit-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+    .contenedor-principal > section {
+        -ms-flex: 0 0 auto;
+        -webkit-flex: 0 0 auto;
+        flex: 0 0 auto;
+        max-height: 240px;
+    }
+
+.contenedor-icono {
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+}
+
+    .contenedor-icono > span {
+        font-family: Roboto, 'Segoe UI Semilight', 'Myriad Pro';
+    }
+
+        .contenedor-icono > span:last-child {
+            font-size: 1em;
+        }
+
+#imgLicencias {
+    max-width: 100%;
+    max-height: 150px;
+    -ms-interpolation-mode: bicubic;
+}
+
+#icono:not(.empresa) {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+#textoIcono {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column;
+    -webkit-flex-flow: column;
+    flex-flow: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    padding-left: 20px;
+    font-family: 'Segoe UI Semilight', 'Myriad Pro';
+}
+
+    #textoIcono > div:first-child {
+        font-size: 4.8em;
+        line-height: 50px;
+        letter-spacing: 22px;
+    }
+
+    #textoIcono > div:last-child {
+        font-size: 1em;
+        letter-spacing: 5px;
+        padding-right: 30px;
+    }
+
+    #textoIcono.Antipasto {
+        font-family: Antipasto, 'Segoe UI Semilight', 'Myriad Pro' !important;
+    }
+
+     #textoIcono.Antipasto > div:first-child {
+        font-size: 5.2em !important;
+        padding-bottom: inherit !important;
+        letter-spacing: 20px !important;
+    }
+
+     #textoIcono.Antipasto > div:last-child {
+        font-size: 1.1em !important;
+    }
+
+.contenedor-central {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+}
+
+.noticias {
+    min-width: 55%;
+    max-width: 55%;
+    border-right-color: rgba(0, 0, 0, 0.3);
+    border-right-style: solid;
+    border-right-width: 1px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+}
+
+    .noticias > span {
+        color: #1B344C;
+    }
+
+    .noticias .noticia-fecha {
+        font-size: small;
+    }
+
+    .noticias .noticia-titulo {
+        font-size: medium;
+        font-weight: bold;
+    }
+
+.formulario {
+    min-width: 45%;
+    max-width: 45%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column nowrap;
+    -webkit-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    padding: 15px;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+    .formulario > * {
+        /*-ms-flex: 1 1 auto;
+        -webkit-flex: 1 1 auto;
+        flex: 1 1 auto;*/
+    }
+
+    .formulario > span {
+        color: #9c9c9c;
+        font-size: 14px;
+    }
+
+    .formulario a {
+        text-decoration: none;
+        font-size: small;
+        float: right;
+        margin: 8px 0;
+        color: blue;
+        cursor: pointer;
+    }
+
+.contenedor-controles .loader {
+    float: right;
+    margin: 8px 25px;
+}
+
+#captcha {
+    display: none;
+}
+
+#imgCaptcha {
+    height: 40px;
+}
+
+#contenedor-ddlEmpresa {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 2px 0 10px 0;
+    border: 1px solid silver;
+    outline: 0;
+    border-radius: 4px 5px;
+}
+
+    #contenedor-ddlEmpresa.focus {
+        border-color: #4d90fe;
+    }
+
+#autocomplete-icon-ddlEmpresa {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 37px;
+    border-right: 1px solid silver;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #E6E6E6;
+    cursor: pointer;
+    border-radius: 5px 0 0 5px;
+}
+
+#ddlEmpresa {
+    -ms-flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+    margin: 0 0 0 38px;
+    border: none;
+    padding-left: 3px;
+    height: 37px;
+    width: 100%;
+}
+
+@media (min-width: 800px) {
+
+    #textoIcono > div:first-child {
+        min-width: 429px;
+        max-width: 429px;
+        padding-bottom: 25px;
+    }
+
+    #textoIcono.Antipasto > div:first-child {
+        line-height: 80px !important;
+    }
+
+    #iconoSvg {
+        min-width: 200px;
+        min-height: 131px;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .contenedor-central {
+        -ms-flex-flow: column nowrap;
+        -webkit-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+        margin-bottom: 0 !important;
+    }
+
+    .contenedor-icono {
+        padding: 10px 0;
+        margin-top: 30px;
+        font-size: 15px;
+    }
+
+        .contenedor-icono > span:last-child {
+            font-size: 1.1em;
+        }
+
+    .noticias {
+        min-width: 100%;
+        max-width: 100%;
+        border: 0;
+        border-top-color: rgba(0, 0, 0, 0.3);
+        border-top-style: solid;
+        border-top-width: 1px;
+        padding-right: 0;
+        -ms-flex-order: 2;
+        order: 2;
+    }
+
+    .formulario {
+        padding-bottom: 10px;
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+        .formulario input {
+            width: 90%;
+        }
+
+        .formulario select {
+            width: 100%;
+        }
+
+    #icono {
+        -ms-flex-flow: column;
+        -webkit-flex-flow: column;
+        flex-flow: column;
+    }
+
+    #textoIcono {
+        padding-left: 0;
+        font-size: 12px;
+    }
+
+        #textoIcono > div:first-child {
+            line-height: 50px;
+            letter-spacing: 15px;
+        }
+
+        #textoIcono > div:last-child {
+            padding-right: 15px;
+        }
+
+    #iconoSvg > svg {
+        transform: scale(.7);
+    }
+}

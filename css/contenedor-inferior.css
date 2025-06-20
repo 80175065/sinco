@@ -1,0 +1,66 @@
+.contenedor-inferior {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 50px;
+    max-height: 50px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+    .contenedor-inferior > a {
+        text-decoration: none;
+        font-family: Roboto, 'Segoe UI Semilight', 'Myriad Pro';
+        font-size: 1em;
+        color: #1B344C;
+        padding-left: 8px;
+    }
+
+.copy{
+    font-size: 10px;
+    text-transform: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    color: white;
+    background: #1B344C;
+    padding: 2px 0;
+}
+
+#imagenSinco {
+    background-image: url(../images/SINCOSOFT.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 30px;
+    width: 185px;
+    padding-right: 8px;
+    border-right: 1px solid silver;
+}
+
+@media (max-width: 800px) {
+    .contenedor-inferior {
+        max-height: 156px;
+    }
+
+        .contenedor-inferior > a {
+            font-size: 0.85em;
+        }
+
+    #imagenSinco {
+        height: 24px;
+        width: 234px;
+    }
+}

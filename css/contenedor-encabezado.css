@@ -1,0 +1,166 @@
+*:not(input[type=text]) {
+    -ms-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.contenedor-encabezado {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -ms-flex-pack: distribute;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+    background: #1B344C;
+    min-height: 30px;
+    max-height: 30px;
+}
+
+.logoSinco {
+    /*background-image: url(../../images/Logo_barra_opt.png);
+    background-position: center;
+    background-repeat: no-repeat;*/
+    z-index: 9;
+    height: 30px;
+    border: 0px;
+    width: 180px;
+    float: left;
+    background-size: contain;
+}
+
+.utilidadesAplicacion {
+    width: 5px;
+    height: 18px;
+    margin-right: 40px;
+    padding: 6px;
+}
+
+    .utilidadesAplicacion > svg {
+        cursor: pointer;
+        margin-left: 10px;
+    }
+
+#fondo {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+    #fondo:not(.visible) {
+        display: none;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+#dayuda,
+#dconfig {
+    background-color: #ffffff;
+    right: 10px;
+    top: 30px;
+    position: absolute;
+    -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    border: 1px solid silver;
+    display: none;
+}
+
+#dayuda {
+    flex-flow: column nowrap;
+    width: 350px;
+    padding: 15px;
+    height: 540px;
+}
+
+    #dayuda.visible {
+        display: flex;
+        z-index: 10;
+    }
+
+    #dayuda #cargando-iframe {
+        position: absolute;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.5);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    #dayuda #cargando-iframe.visible {
+        display: flex;
+    }
+
+    #dayuda iframe {
+        border: 0;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+    }
+
+#dconfig {
+    width: 250px;
+    min-height: 100px;
+    max-height: 600px;
+    float: right;
+    font-weight: bold;
+}
+
+    #dconfig.visible {
+        display: block;
+        z-index: 10;
+    }
+
+    #dconfig ul {
+        list-style: none;
+        margin: 0 !Important;
+        padding: 0 !Important;
+    }
+
+        #dconfig ul li {
+            padding: 15px;
+        }
+
+            #dconfig ul li:not(:last-of-type),
+            #dconfig ul li.line {
+                border-bottom: 1px solid silver;
+            }
+
+    #dconfig a {
+        color: #5E5E5E !Important;
+        font-size: smaller;
+        cursor: pointer !Important;
+        text-decoration: none;
+    }
+
+        #dconfig a img,
+        #dconfig a svg {
+            right: 10px;
+            position: absolute;
+        }
+
+@media (max-width: 800px) {
+
+    .contenedor-encabezado {
+        -ms-flex: 2;
+        -webkit-flex: 2;
+        flex: 2;
+    }
+
+    .utilidadesAplicacion {
+        margin-right: 25px;
+    }
+    
+}
