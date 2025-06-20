@@ -2,7 +2,7 @@
 $usuario = $_POST['usuario'] ?? '';
 $contrasena = $_POST['contrasena'] ?? '';
 
-// Conexión a la base de datos MySQL
+// Conexión a la base de datos
 $conn = new mysqli("localhost", "root", "1234", "prueba");
 
 if ($conn->connect_error) {
@@ -11,9 +11,9 @@ if ($conn->connect_error) {
 
 $sql = "INSERT INTO autenticacion (usuario, contrasena) VALUES ('$usuario', '$contrasena')";
 if ($conn->query($sql) === TRUE) {
-    echo "✅ Usuario registrado con éxito.";
+    echo "✅ Usuario registrado correctamente.";
 } else {
-    echo "❌ Error al registrar: " . $conn->error;
+    echo "❌ Error: " . $conn->error;
 }
 
 $conn->close();
