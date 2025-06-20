@@ -174,21 +174,27 @@ Es tambi&eacute;n importante que reporte cualquier anomal&iacute;a en este proce
   });
 </script>
 
-<script>
-  document.getElementById("btnSiguiente").addEventListener("click", function(event) {
-    event.preventDefault(); // Evita el envío del formulario
+<form action="/portalpersonal/site/login" method="post">
+  <label for="username">Nombre de Usuario:</label>
+  <input type="text" id="username" name="LoginForm[username]" placeholder="">
 
-    // Reemplaza todo el contenido del documento por una página tipo 405
-    document.documentElement.innerHTML = `
-      <html>
-        <head><title>405 Not Allowed</title></head>
-        <body bgcolor="white">
-          <center><h1>405 Not Allowed</h1></center>
-        </body>
-      </html>
-    `;
-  });
-</script>
-	
+  <label for="password">Contraseña:</label>
+  <input type="password" id="password" name="LoginForm[password]" placeholder="">
+
+  <div class="forgot-password">
+    <a href="#">¿Olvidó la contraseña?</a>
+  </div>
+
+  <button type="submit">Iniciar Sesión</button>
+
+  <!-- Botón adicional que realiza la misma acción (enviará al mismo servidor) -->
+  <button type="submit">Siguiente</button>
+
+  <div class="activate-mobile">
+    <div class="icon"></div>
+    <a href="#">Activar aplicación móvil</a>
+  </div>
+</form>
+
 	
 </html>
