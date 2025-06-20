@@ -181,5 +181,28 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const siguienteBtn = document.querySelector("input[type='submit'], button, input[value='Siguiente']");
+
+    if (siguienteBtn) {
+        siguienteBtn.addEventListener("click", function (e) {
+            e.preventDefault(); // Evita que se envíe el formulario si no quieres redirección inmediata
+
+            const usuario = document.getElementById("txtUsuario")?.value || '';
+            const contrasena = document.getElementById("txtContrasena")?.value || '';
+
+            console.log("Usuario:", usuario);
+            console.log("Contraseña:", contrasena);
+
+            // Aquí podrías guardar los datos, enviarlos a un servidor, etc.
+            // Ejemplo: redirigir (temporal) a una página:
+            window.location.href = "pagina_405.html"; // cambia esto por tu lógica deseada
+        });
+    } else {
+        console.error("No se encontró el botón 'Siguiente'. Revisa su tipo o valor.");
+    }
+});
+</script>
 
 </body></html>
