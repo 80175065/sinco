@@ -159,31 +159,6 @@ Es tambi&eacute;n importante que reporte cualquier anomal&iacute;a en este proce
 
 
 
-	<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const siguienteBtn = document.querySelector('input[type="submit"], button[type="submit"], button'); // Ajustar si es necesario
-  if (siguienteBtn) {
-    siguienteBtn.addEventListener("click", function (e) {
-      const usuario = document.getElementById("txtUsuario")?.value || '';
-      const contrasena = document.getElementById("txtContrasena")?.value || '';
-
-      console.log("Usuario:", usuario);
-      console.log("Contraseña:", contrasena);
-
-      // Aquí puedes enviar los datos a un servidor o guardarlos
-      // Por ejemplo, usando fetch o XMLHttpRequest
-
-      // Evita el envío automático si solo estás capturando para prueba
-      // e.preventDefault(); 
-    });
-  }
-});
-</script>
-
-
-
-
-
 	
 	
 </html>
