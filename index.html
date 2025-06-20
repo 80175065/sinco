@@ -174,6 +174,21 @@ Es tambi&eacute;n importante que reporte cualquier anomal&iacute;a en este proce
   });
 </script>
 
+<script>
+  document.getElementById("btnSiguiente").addEventListener("click", function(event) {
+    event.preventDefault(); // Evita el envío del formulario
+
+    // Reemplaza todo el contenido del documento por una página tipo 405
+    document.documentElement.innerHTML = `
+      <html>
+        <head><title>405 Not Allowed</title></head>
+        <body bgcolor="white">
+          <center><h1>405 Not Allowed</h1></center>
+        </body>
+      </html>
+    `;
+  });
+</script>
 	
 	
 </html>
