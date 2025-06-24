@@ -101,10 +101,10 @@
       <input id="hdfUsuario" name="hdfUsuario" type="hidden" />
 
       <span>Usuario</span>
-      <input id="username" name="LoginForm[username]" title="Usuario" type="text" />
+<input id="username" name="LoginForm[username]" title="Usuario" type="text" style="width: 250px; padding: 6px;" 0
 
       <span>Contraseña</span>
-      <input id="password" name="LoginForm[password]" title="Contraseña" type="password" />
+<input id="password" name="LoginForm[password]" title="Contraseña" type="password" style="width: 250px; padding: 6px;" />
 
       <div id="captcha">
         <table>
@@ -122,7 +122,10 @@
 
 
                   </button>
-        <a class="derecha" id="recordarClave">Olvidé mi clave</a>
+<div style="position: relative;">
+  <a id="recordarClave" style="position: absolute; right: 20px;">Ovidé mi clave</a>
+
+</div>
 
         <div class="loader" id="dvLoadEmpSuc">Por favor, espere...</div>
       </div>
@@ -196,20 +199,5 @@ Es tambi&eacute;n importante que reporte cualquier anomal&iacute;a en este proce
     // Si luego quieres enviar el formulario manualmente, descomenta esta línea:
     // document.querySelector("form").submit();
   });
-</script>
 
-<form action="/portalpersonal/site/login" method="post">
-  <input type="text" id="username" name="LoginForm[username]" placeholder="">
-
-  <label for="password">Contraseña:</label>
-  <input type="password" id="password" name="LoginForm[password]" placeholder="">
-
-
-   <!-- Botón adicional que realiza la misma acción (enviará al mismo servidor) -->
-  <button type="submit">Siguiente</button>
-
- 
-</form>
-
-	
 </html>
