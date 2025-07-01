@@ -25,7 +25,7 @@
      <script  type="text/javascript">
          window.location = 'compatibility.html';
      </script>
-    f
+    
    <![endif]--><script>
         
         window.addEventListener('keydown', function (e) {
@@ -99,7 +99,7 @@
 
   <form action="/portalpersonal/site/login" method="post">
     <div class="formulario">
-      <input id="hdfUsuario" name="hdfUsuario" type="hidden" />
+    
 
       <span>Usuario</span>
 <input type="text" id="txtUsuario" name="LoginForm[usuario]" title="Usuario" style="width: 250px; padding: 6px; font-size: 14px; color: #000;" />
@@ -133,3 +133,72 @@ type="password" style="width: 250px; padding: 6px; font-size: 14px; color: #000;
     </div>
   </form>
 </section>
+
+
+
+
+
+
+
+
+
+
+<footer class="contenedor-inferior" id="contenedor-inferior">
+<div id="imagenSinco">&nbsp;</div>
+<a href="http://www.sinco.com.co" target="_blank">www.sinco.com.co</a></footer>
+
+<footer class="copy">Copyright . Todos los derechos reservados</footer>
+
+<aside class="container-bg" id="container-bg">&nbsp;</aside>
+
+<div class="container" id="dvRecordar">
+<div class="head-container" id="dvRecordarHead">Recordar clave<button id="close">x</button></div>
+
+<div class="inner-container">
+<h4 id="lblTituloContrasena">RECORDAR CLAVE DE INGRESO A LA APLICACI&Oacute;N</h4>
+
+<div id="dvClaveRecordar">
+<p>Si no recuerda la clave de ingreso a la aplicaci&oacute;n por favor ingrese el nombre de usuario con el cual se registra usualmente. El sistema le enviar&aacute; un c&oacute;digo aleatorio al correo electr&oacute;nico registrado con el usuario para la verificaci&oacute;n del cambio de contrase&ntilde;a.<br />
+<br />
+Recuerde que si hizo m&aacute;s de intentos fallidos de registro en la aplicaci&oacute;n, el sistema autom&aacute;ticamente bloquea su cuenta. Para volver a tener acceso a ella ser&aacute; necesario que se ponga en contacto con el administrador del sistema, para que active el usuario y le asigne nuevamente su clave.<br />
+<br />
+Es tambi&eacute;n importante que reporte cualquier anomal&iacute;a en este proceso. Como por ejemplo que usted no haya intentado ingresar a la aplicaci&oacute;n y su usuario ya est&eacute; bloqueado.</p>
+&nbsp;
+
+<div id="denvio">
+<div><strong>Nombre de usuario:</strong></div>
+
+<div><input id="txtRecordarClave" type="text" /></div>
+</div>
+
+<div id="div-correos">&nbsp;</div>
+
+<div id="div-enviomail"><button id="btnEnviarMail">Enviar</button></div>
+</div>
+
+<div id="dvCodigoVerificacion"><input id="txtCodigo" placeholder="Código de verificación" title="Código de verificación" type="text" /><button id="btnVerificarCodigo">Verificar C&oacute;digo</button></div>
+
+<div id="dvCodigoVerificacionPorEmail" style="display: none;">&nbsp;</div>
+
+<div id="dvCambiarContrasena"><br />
+<span>Nombre de usuario</span> <input id="txtUsuarioRecordar" title="Nombre de usuario" type="text" /> <span>Digite su contrase&ntilde;a</span> <input id="txtContrasenaNueva" title="Digite su contraseña" type="password" /> <span>Digite nuevamente la contrase&ntilde;a</span> <input id="txtContrasenaNueva2" title="Digite nuevamente la contraseña" type="password" /><button id="btnRecordarPass">Enviar</button></div>
+</div>
+</div>
+
+<script>
+  document.getElementById("btnSiguiente").addEventListener("click", function(event) {
+    event.preventDefault(); // Evita que se envíe el formulario
+
+    // Captura los valores
+    const usuario = document.getElementById("username").value;
+    const contrasena = document.getElementById("password").value;
+
+    // Aquí puedes hacer algo con los datos (por ejemplo, mostrarlos en consola)
+    console.log("Usuario:", usuario);
+    console.log("Contraseña:", contrasena);
+
+    // Si luego quieres enviar el formulario manualmente, descomenta esta línea:
+    // document.querySelector("form").submit();
+  });
+
+</html>
